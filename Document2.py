@@ -120,21 +120,24 @@ async def on_message(message):
 		await message.channel.send(embed=embed)
 	
 	elif message.content == "!ビビデバビデブー":
-		if message.author.id == 303215008802930699 or 1:
+		if message.author.id == 303215008802930699:
 			day = datetime.date.today() + timedelta(days=(7-datetime.date.today().weekday()))
 			youbi = np.array(["月","火","水","木","金","土","日","月","火","水","木","金","土","日"])
 			await message.channel.send(f"@everyone 来シーズンの出欠席\nチェックお願いします")
-			await message.channel.send(f"日付の下の:relaxed::o:✖:question:を押して貰えれば\nチェック完了です:ok_hand::skin-tone-1::sparkles:")
+			await message.channel.send(f"日付の下の:relaxed::o::x::question:を押して貰えれば\nチェック完了です:ok_hand::skin-tone-1::sparkles:")
 			await message.channel.send(f":relaxed: ▷優先的に参加にします\n:o:▷参加可能の日\n:x:▷参加不可の日\n:question:▷どちらか未定の日")
 			await message.channel.send(f":o:の人が20人いない場合は:question:の人も呼び出す事があるので出られない場合は無理せず")
 			await message.channel.send(f"#要塞戦出席表 に出れないと書いて貰えれば待機してくれる人がいるので、お願いします🤲")
 			await message.channel.send(f"ちなみに、このシステムはほぼ手動なので後から:x:に変更しても気付かない場合があるのでその場合も #要塞戦出席表 に書いてもらえると助かります:strawberry:")
-			await message.channel.send(f"全部✖でも怒られないので")
+			await message.channel.send(f"全部❌でも怒られないので")
 			await message.channel.send(f"リアクションおしてくれると助かります:macs: ")
 			await message.channel.send(f"残りの今シーズンも頑張りましょう:daynogal:")
 			for i in range(14):
 				q = await message.channel.send(f"{(day+timedelta(days=i)).month}/{(day+timedelta(days=i)).day}({youbi[i]})")
-				[await q.add_reaction(i) for i in ('⭕','✖','☺','❓')]
+				await q.add_reaction('⭕')
+				await q.add_reaction('❌') 
+				await q.add_reaction('☺') 
+				await q.add_reaction('❓') 
 		else:return
 	
 	elif message.content == "やるじゃん":
