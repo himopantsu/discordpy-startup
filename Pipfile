@@ -5,6 +5,14 @@ verify_ssl = true
 
 [dev-packages]
 pytest-flake8 = "*"
+gspread = "*"
+oauth2client = "*"
+numpy = "*"
+pandas = "*"
+datetime = "*"
+requests = "*"
+BeautifulSoup4 = "*"
+
 
 [packages]
 discord-py = {extras = ["voice"],version = "*"}
