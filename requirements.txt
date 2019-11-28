@@ -1,2 +1,9 @@
 discord.py[voice]
 pytest-flake8
+gspread
+oauth2client
+numpy
+pandas
+datetime
+requests
+BeautifulSoup4
