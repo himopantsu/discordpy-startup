@@ -134,10 +134,10 @@ async def on_message(message):
 			await message.channel.send(f"残りの今シーズンも頑張りましょう:daynogal:")
 			for i in range(14):
 				q = await message.channel.send(f"{(day+timedelta(days=i)).month}/{(day+timedelta(days=i)).day}({youbi[i]})")
-				await q.add_reaction('⭕')
-				await q.add_reaction('❌') 
-				await q.add_reaction('☺') 
-				await q.add_reaction('❓') 
+				[await q.add_reaction('⭕')]
+				[await q.add_reaction('❌')] 
+				[await q.add_reaction('☺')]
+				[await q.add_reaction('❓')]
 		else:return
 	
 	elif message.content == "やるじゃん":
