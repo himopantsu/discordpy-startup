@@ -151,6 +151,9 @@ async def on_message(message):
 	elif message.content == "やるじゃん":
 		await message.channel.send(f"ありがとう")
 		
+	elif message.content == "まあこ":
+		await message.channel.send(f"寝てるよ")
+		
 	elif message.content == "やってないじゃん":
 		await message.channel.send(f"ごめんなさい")
 		
