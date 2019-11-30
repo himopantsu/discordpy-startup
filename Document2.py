@@ -152,8 +152,8 @@ async def on_message(message):
 	
 	elif message.content == "!投票":
 	# リアクションアイコンを付けたい
-		q = await message.channel.send("あなたは右利きですか？")
-		[await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記
+		await message.channel.send("あなたは右利きですか？")
+		await add_reaction(i) for i in ('⭕')  # for文の内包表記
 
 	elif message.content == "!おみくじ":
 		# Embedを使ったメッセージ送信 と ランダムで要素を選択
