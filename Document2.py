@@ -104,8 +104,7 @@ async def on_member_join(member):
 	setumei = 641052750699954187
 	jikosyoukai = 577531306632806415
 	channel = client.get_channel(CHANNEL_ID)
-	await channel.send(f"{member}さんこんにちはしゃくし～です")
-	await channel.send(f"このサーバーの管理をしています")
+	await channel.send(f"@{member} さんこんにちはしゃくし～です")
 	await channel.send(f"まずは{setumei}の確認と{jikosyoukai}の記入をお願いします")
 	await channel.send(f"これからよろしくお願いします!")
 	
@@ -139,13 +138,15 @@ async def on_message(message):
 			await message.channel.send(f":relaxed: ▷優先的に参加にします\n:o:▷参加可能の日\n:x:▷参加不可の日\n:question:▷どちらか未定の日")
 			await message.channel.send(f":o:の人が20人いない場合は:question:の人も呼び出す事があるので出られない場合は無理せず")
 			await message.channel.send(f"#要塞戦出席表 に出れないと書いて貰えれば待機してくれる人がいるので、お願いします🤲")
-			await message.channel.send(f"ちなみに、このシステムはほぼ手動なので後から:x:に変更しても気付かない場合があるのでその場合も #要塞戦出席表 に書いてもらえると助かります:strawberry:")
+			await message.channel.send(f"ちなみに、このシステムはほぼ手動なので後から:x:に変更しても気付かない場合があるのでその場合も\n #要塞戦出席表 に書いてもらえると助かります:strawberry:")
 			await message.channel.send(f"全部❌でも怒られないので")
 			await message.channel.send(f"リアクションおしてくれると助かります:macs: ")
 			await message.channel.send(f"残りの今シーズンも頑張りましょう:daynogal:")
 			for i in range(14):
 				q = await message.channel.send(f"{(day+timedelta(days=i)).month}/{(day+timedelta(days=i)).day}({youbi[i]})")
 				[await q.add_reaction(i) for i in ('😊','⭕','❌','❓')]
+
+		else:await message.channel.send(f"それはまあこしか使えないよ")
 	
 	elif message.content == "やるじゃん":
 		await message.channel.send(f"ありがとう")
