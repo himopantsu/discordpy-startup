@@ -98,7 +98,17 @@ async def on_ready():
 	print(discord.__version__)  # discord.pyのバージョン
 	print('------')
 
-
+@client.event
+async def on_member_join(member):
+	CHANNEL_ID = 576797690906673154
+	setumei = 641052750699954187
+	jikosyoukai = 577531306632806415
+    	channel = client.get_channel(CHANNEL_ID)
+	await channel.send(f"{member}さんこんにちはしゃくし～です")
+	await channel.send(f"このサーバーの管理をしています")
+	await channel.send(f"まずは{setumei}の確認と{jikosyoukai}の記入をお願いします")
+	await channel.send(f"これからよろしくお願いします!")
+	
 @client.event
 async def on_message(message):
 	"""メッセージを処理"""
