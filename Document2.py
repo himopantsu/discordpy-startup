@@ -103,7 +103,7 @@ async def on_member_join(member):
 	CHANNEL_ID = 576797690906673154
 	setumei = 641052750699954187
 	jikosyoukai = 577531306632806415
-    	channel = client.get_channel(CHANNEL_ID)
+	channel = client.get_channel(CHANNEL_ID)
 	await channel.send(f"{member}さんこんにちはしゃくし～です")
 	await channel.send(f"このサーバーの管理をしています")
 	await channel.send(f"まずは{setumei}の確認と{jikosyoukai}の記入をお願いします")
@@ -155,7 +155,6 @@ async def on_message(message):
 		
 	elif message.content == "ゆきやこんこ":
 		await message.channel.send(f"⛄雪や⛄\n\n❄❅❆❄❅❆❄❅❆❄\n▉▉▉ ◥◣　　 ▉▉▉ \n　　▉ 　　◢◤ 　　▉ \n▉▉▉ ◢▉◤　 ▉▉▉ \n❄❅❆❄❅❆❄❅❆❄\n\n🚽ケツから🚽\n\n💩💩💩💩💩💩💩💩\n　▉\n▉▉▉▉◥◣　　▉▉▉\n▉　◢◤　　◢◤　　▉\n　◢◤　◢▉◤　▉▉▉\n💩💩💩💩💩💩💩💩")
-	     
 	elif message.content == "juruli":
 		await message.channel.send(f"そのキャラはキャラデリしました")
 		
