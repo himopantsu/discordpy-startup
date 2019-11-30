@@ -135,7 +135,6 @@ async def on_message(message):
 			for i in range(14):
 				q = await message.channel.send(f"{(day+timedelta(days=i)).month}/{(day+timedelta(days=i)).day}({youbi[i]})")
 				[await q.add_reaction(i) for i in ('😊','⭕','❌','❓')]
-		else:return
 	
 	elif message.content == "やるじゃん":
 		await message.channel.send(f"ありがとう")
