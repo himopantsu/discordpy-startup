@@ -1,4 +1,5 @@
 import discord
+from discord.ext import commands
 import gspread
 import random  # おみくじで使用
 from oauth2client.service_account import ServiceAccountCredentials
