@@ -120,7 +120,7 @@ async def on_message(message):
 		await message.channel.send(embed=embed)
 	
 	elif message.content == "!ビビデバビデブー":
-		if message.author.id == 303215008802930699 or 1:
+		if message.author.id == 173990318427996160:
 			day = datetime.date.today() + timedelta(days=(7-datetime.date.today().weekday()))
 			youbi = np.array(["月","火","水","木","金","土","日","月","火","水","木","金","土","日"])
 			await message.channel.send(f"@everyone 来シーズンの出欠席\nチェックお願いします")
