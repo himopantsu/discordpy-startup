@@ -93,7 +93,7 @@ def uranai(url):
 
 def yari():
 	imagepicture = glob.glob("maplembuki/1_sensi/yari/*.png")
-	result = random.choices(imagepicture, k=11)
+	result = random.choices(imagepicture, k=1)
 	return result
 
 @client.event
@@ -157,10 +157,7 @@ async def on_message(message):
 	
 	elif message.content == "!武器ガチャ":
 		kekka = yari()
-		embed = discord.Embed(title="There are",description=f"{message.author.mention}さんの武器ガチャ結果")
-		for i in range(len(kekka)):
-			embed.add_field(name=f"{i}",value=f"{kekka[i]}",inline=False)
-		await message.channel.send(embed=embed)
+		await message.channel.send(f'{message.author.mention}さんの武器ガチャ結果', file=discord.File())
 		
 	elif message.content == "やるじゃん":
 		await message.channel.send(f"ありがとう")
