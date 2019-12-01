@@ -94,7 +94,7 @@ def uranai(url):
 def yari():
 	imagepicture = glob.glob("maplembuki/1_sensi/yari/*.png")
 	result = random.choices(imagepicture, k=11)
-	return result:
+	return result
 
 @client.event
 async def on_ready():
