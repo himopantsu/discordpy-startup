@@ -156,9 +156,6 @@ async def on_message(message):
 		
 	elif message.content == "えっち":
 		await message.channel.send(f'きゃー！{message.author.mention}さんのえっち！！', file=discord.File("4ba65a1c.jpg"))
-		
-	elif message.content == "えっちえっち":
-		await message.channel.send(f'きゃー！{message.author.mention}さんのえっち！！', file=discord.File("4ba65a1c.jpg","4ba65a1c.jpg"))	
 
 	elif message.content == "まあこ":
 		await message.channel.send(f"寝てるよ")
