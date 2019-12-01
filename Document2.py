@@ -1,5 +1,5 @@
 import discord
-import grob
+import glob
 from discord.ext import commands
 import gspread
 import random  # おみくじで使用
