@@ -154,10 +154,6 @@ async def on_message(message):
 				[await q.add_reaction(i) for i in ('😊','⭕','❌','❓')]
 
 		else:await message.channel.send(f"それはまあこしか使えないよ")
-	
-	elif message.content == "!武器ガチャ":
-		kekka = yari()
-		await message.channel.send(f'{message.author.mention}さんの武器ガチャ結果', file=discord.File(kekka))
 		
 	elif message.content == "やるじゃん":
 		await message.channel.send(f"ありがとう")
