@@ -1,4 +1,5 @@
 import discord
+import grob
 from discord.ext import commands
 import gspread
 import random  # おみくじで使用
@@ -9,6 +10,7 @@ import datetime
 import os
 import urllib.request, urllib.error
 import requests
+import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
 from datetime import timedelta
 
@@ -89,6 +91,11 @@ def uranai(url):
 	list.append(bbb)
 	return list,ddd
 
+def yari():
+	imagepicture = glob.glob("maplembuki/1_sensi/yari/*.png")
+	result = random.choices(imagepicture, k=11)
+	return result:
+
 @client.event
 async def on_ready():
 	"""起動時に通知してくれる処理"""
@@ -113,7 +120,7 @@ async def on_message(message):
 	"""メッセージを処理"""
 	if message.author.bot:  # ボットのメッセージをハネる
 		return
-
+	
 	elif message.content == "!参加":
 	# チャンネルへメッセージを送信
 		cell_1,cell_2,count = set_cell(message.author.id)
@@ -148,6 +155,13 @@ async def on_message(message):
 
 		else:await message.channel.send(f"それはまあこしか使えないよ")
 	
+	elif message.content == "!武器ガチャ":
+		kekka = yari()
+		embed = discord.Embed(title="There are",description=f"{message.author.mention}さんの武器ガチャ結果")
+		for i in range(len(kekka)):
+			embed.add_field(name=f"{i}",value="{kekka[i]}",inline=False)
+		await message.channel.send(embed=embed)
+		
 	elif message.content == "やるじゃん":
 		await message.channel.send(f"ありがとう")
 		
