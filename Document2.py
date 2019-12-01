@@ -159,7 +159,7 @@ async def on_message(message):
 		kekka = yari()
 		embed = discord.Embed(title="There are",description=f"{message.author.mention}さんの武器ガチャ結果")
 		for i in range(len(kekka)):
-			embed.add_field(name=f"{i}",value="{kekka[i]}",inline=False)
+			embed.add_field(name=f"{i}",value=f"{kekka[i]}",inline=False)
 		await message.channel.send(embed=embed)
 		
 	elif message.content == "やるじゃん":
