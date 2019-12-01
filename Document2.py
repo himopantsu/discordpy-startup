@@ -157,7 +157,7 @@ async def on_message(message):
 	
 	elif message.content == "!武器ガチャ":
 		kekka = yari()
-		await message.channel.send(f'{message.author.mention}さんの武器ガチャ結果', file=discord.File())
+		await message.channel.send(f'{message.author.mention}さんの武器ガチャ結果', file=discord.File(kekka))
 		
 	elif message.content == "やるじゃん":
 		await message.channel.send(f"ありがとう")
