@@ -26,8 +26,10 @@ client = discord.Client()  # 接続に使用するオブジェクト
 credentials = ServiceAccountCredentials.from_json_keyfile_name('okashi-55fd53c0b60c.json', scope)
 gc = gspread.authorize(credentials)
 SPREADSHEET_KEY = sheet_token
-#worksheet = gc.open_by_key(SPREADSHEET_KEY).sheet1
-worksheet = gc.open_by_url("https://docs.google.com/spreadsheets/d/"+SPREADSHEET_KEY+"/edit#gid=0")
+worksheet = gc.open_by_key(SPREADSHEET_KEY).sheet1
+worksheet_list = worksheet.worksheets()
+print(worksheet_list)
+#worksheet = gc.open_by_url("https://docs.google.com/spreadsheets/d/"+SPREADSHEET_KEY+"/edit#gid=0")
 
 def dayedit(day):
 	index = day.find("'")
