@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
 from datetime import timedelta
 
+
 scope = ['https://spreadsheets.google.com/feeds',
 			'https://www.googleapis.com/auth/drive']
 
@@ -363,7 +364,16 @@ async def on_message(message):
 		embed.add_field(name="====",value=ddd,inline=False)
 		await message.channel.send(embed=embed)
 
-		
+@tasks.loop(minutes=30)
+async def loop():
+	scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
+	sheet_token = os.environ['SHEET_TOKEN']
+	bot_token = os.environ['DISCORD_BOT_TOKEN']
+	client = discord.Client()  # 接続に使用するオブジェクト
+	credentials = ServiceAccountCredentials.from_json_keyfile_name('okashi-55fd53c0b60c.json', scope)
+	gc = gspread.authorize(credentials)
+	SPREADSHEET_KEY = sheet_token
+	worksheet = gc.open_by_key(SPREADSHEET_KEY).sheet1
 
 # botの接続と起動
 # （botアカウントのアクセストークンを入れてください）
