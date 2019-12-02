@@ -45,6 +45,8 @@ def set_cell(user):
 	
 	df1 = df.iloc[:2,5:19].T
 	df1.columns = ["_","day"]
+	print(today)
+	print(df1["day"])
 	row_cell = df1[df1["day"] == today].index[0] + 1
 	
 	print(row_cell)
