@@ -27,10 +27,7 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name('okashi-55fd53c0b
 gc = gspread.authorize(credentials)
 SPREADSHEET_KEY = sheet_token
 workbook = gc.open_by_key(SPREADSHEET_KEY)
-worksheet = workbook.worksheet("参加者")
-#worksheet_list = worksheet.worksheets()
-#print(worksheet_list)
-#worksheet = gc.open_by_url("https://docs.google.com/spreadsheets/d/"+SPREADSHEET_KEY+"/edit#gid=0")
+worksheet = workbook.worksheet("!参加")
 
 def dayedit(day):
 	index = day.find("'")
