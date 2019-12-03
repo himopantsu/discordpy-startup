@@ -374,8 +374,8 @@ async def loop():
 	credentials = ServiceAccountCredentials.from_json_keyfile_name('okashi-55fd53c0b60c.json', scope)
 	gc = gspread.authorize(credentials)
 	SPREADSHEET_KEY = sheet_token
-	worksheet = gc.open_by_key(SPREADSHEET_KEY).sheet1
-	print("aaa")
+	workbook = gc.open_by_key(SPREADSHEET_KEY)
+	worksheet = workbook.worksheet("!参加")
 
 # botの接続と起動
 # （botアカウントのアクセストークンを入れてください）
