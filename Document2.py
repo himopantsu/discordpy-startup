@@ -186,6 +186,10 @@ async def on_message(message):
 	elif message.content == "マルガリタ":
 		await message.channel.send(f"抜けませんでした")
 	
+	elif message.content == "かてぽん":
+		await message.channel.send(f"ブルブルブルブルアイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:アイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:ブ・ル・ベ・リ・アイ！！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:ブルブルブルブルアイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:アイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:ブ・ル・ベ・リ・アイ！！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:")
+	
+	
 	elif message.content == "!投票":
 	# リアクションアイコンを付けたい
 		msg = await message.channel.send("あなたは右利きですか？")
