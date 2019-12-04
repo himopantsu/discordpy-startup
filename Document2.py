@@ -180,6 +180,16 @@ async def on_message(message):
 	elif message.content == "juruli":
 		await message.channel.send(f"そのキャラはキャラデリしました")
 		
+	elif message.content == "!ままん":
+		kuarataid = 582930470828769280
+		await message.channel.send(f"<@!{kurataid}> ままぁ")
+		await message.channel.send(f"あああん")
+		await message.channel.send(f"あああああん")
+		await message.channel.send(f"ままああああ")
+		await message.channel.send(f"ああん")
+		await message.channel.send(f"あああああああああああああああああああああああああああああああああああああああああああ")
+		await message.channel.send(f"あああああああああああああああああああああああああああｂｂ")
+		
 	elif message.content == "にーと":
 		await message.channel.send(f"にーとくさい")	
 		
