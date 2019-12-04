@@ -181,13 +181,7 @@ async def on_message(message):
 		await message.channel.send(f"そのキャラはキャラデリしました")
 		
 	elif message.content == "!ままん":
-		await message.channel.send(f"<@!582930470828769280> ままぁ")
-		await message.channel.send(f"あああん")
-		await message.channel.send(f"あああああん")
-		await message.channel.send(f"ままああああ")
-		await message.channel.send(f"ああん")
-		await message.channel.send(f"あああああああああああああああああああああああああああああああああああああああああああ")
-		await message.channel.send(f"あああああああああああああああああああああああああああｂｂ")
+		await message.channel.send(f"ままぁ\nあああん\nあああああん\nままああああ\nああん\nあああああああああああああああああああああああああああああああああああああああああああ\nあああああああああああああああああああああああああああｂｂ")
 		
 	elif message.content == "にーと":
 		await message.channel.send(f"にーとくさい")	
