@@ -181,8 +181,7 @@ async def on_message(message):
 		await message.channel.send(f"そのキャラはキャラデリしました")
 		
 	elif message.content == "!ままん":
-		kuarataid = 582930470828769280
-		await message.channel.send(f"<@!{kurataid}> ままぁ")
+		await message.channel.send(f"<@!582930470828769280> ままぁ")
 		await message.channel.send(f"あああん")
 		await message.channel.send(f"あああああん")
 		await message.channel.send(f"ままああああ")
