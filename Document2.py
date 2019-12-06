@@ -157,25 +157,25 @@ async def on_message(message):
 
 		else:await message.channel.send(f"それはまあこしか使えないよ")
 		
-	elif message.content == "やるじゃん":
+	elif message.content == "!やるじゃん":
 		await message.channel.send(f"ありがとう")
 		
-	elif message.content == "Esprit":
+	elif message.content == "!Esprit":
 		await message.channel.send(f"抜けたほうがいいですよ")
 		
-	elif message.content == "えっち":
+	elif message.content == "!えっち":
 		await message.channel.send(f'きゃー！{message.author.mention}さんのえっち！！', file=discord.File("4ba65a1c.jpg"))
 
-	elif message.content == "まあこ":
+	elif message.content == "!まあこ":
 		await message.channel.send(f"寝てるよ")
 		
-	elif message.content == "ハンバーグ":
+	elif message.content == "!ハンバーグ":
 		await message.channel.send(f"ハンバアアアアアアアアアアアアアアアアアアアアアアアアアアアグ！！！！！！")
 	
-	elif message.content == "やってないじゃん":
+	elif message.content == "!やってないじゃん":
 		await message.channel.send(f"ごめんなさい")
 		
-	elif message.content == "ゆきやこんこ":
+	elif message.content == "!ゆきやこんこ":
 		await message.channel.send(f"⛄雪や⛄\n\n❄❅❆❄❅❆❄❅❆❄\n▉▉▉ ◥◣　　 ▉▉▉ \n　　▉ 　　◢◤ 　　▉ \n▉▉▉ ◢▉◤　 ▉▉▉ \n❄❅❆❄❅❆❄❅❆❄\n\n🚽ケツから🚽\n\n💩💩💩💩💩💩💩💩\n　▉\n▉▉▉▉◥◣　　▉▉▉\n▉　◢◤　　◢◤　　▉\n　◢◤　◢▉◤　▉▉▉\n💩💩💩💩💩💩💩💩")
 	elif message.content == "juruli":
 		await message.channel.send(f"そのキャラはキャラデリしました")
@@ -183,13 +183,13 @@ async def on_message(message):
 	elif message.content == "!ままん":
 		await message.channel.send(f"ままぁ\nあああん\nあああああん\nままああああ\nああん\nあああああああああああああああああああああああああああああああああああああああああああ\nあああああああああああああああああああああああああああｂｂ")
 		
-	elif message.content == "にーと":
+	elif message.content == "!にーと":
 		await message.channel.send(f"にーとくさい")	
 		
-	elif message.content == "マルガリタ":
+	elif message.content == "!マルガリタ":
 		await message.channel.send(f"抜けませんでした")
 	
-	elif message.content == "かてぽん":
+	elif message.content == "!かてぽん":
 		await message.channel.send(f"ブルブルブルブルアイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:アイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:ブ・ル・ベ・リ・アイ！！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:ブルブルブルブルアイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:アイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:ブ・ル・ベ・リ・アイ！！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:")
 	
 	
