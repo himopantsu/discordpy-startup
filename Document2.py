@@ -381,7 +381,7 @@ async def on_message(message):
 		embed.add_field(name="====",value=ddd,inline=False)
 		await message.channel.send(embed=embed)
 
-@tasks.loop(minutes=15)
+@tasks.loop(minutes=1)
 async def loop():
 	scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
 	sheet_token = os.environ['SHEET_TOKEN']
@@ -393,6 +393,7 @@ async def loop():
 	workbook = gc.open_by_key(SPREADSHEET_KEY)
 	worksheet = workbook.worksheet("!参加")
 	print("test")
+
 loop.start()
 # botの接続と起動
 # （botアカウントのアクセストークンを入れてください）
