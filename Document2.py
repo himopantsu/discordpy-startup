@@ -133,13 +133,23 @@ async def on_message(message):
 			worksheet.update_cell(cell_2,cell_1,"〇")
 			await message.channel.send(f"{message.author.mention}さん 参加確認しました\n今シーズンの参加回数は累計{count}回です")  # f文字列（フォーマット済み文字列リテラル）
 
+	elif message.content == "!星空":
+		if message.author.id == 573911598008107009:
+			cell_1,cell_2,count = set_cell(506660639964659768)
+			if cell_2 == 0:
+				await message.channel.send(f"星空さん シートにIDがありません")  # f文字列（フォーマット済み文字列リテラル）
+			else:
+				worksheet.update_cell(cell_2,cell_1,"〇")
+				await message.channel.send(f"星空さん 参加確認しました\n今シーズンの参加回数は累計{count}回です")  # f文字列（フォーマット済み文字列リテラル）
+		else:await message.channel.send(f"それはニートちゃんしか使えないよ")
+	
 	elif message.content == "!きゃすん":
 		embed = discord.Embed(title="個通相手募集～", description=f"{message.author.mention}さんが個通相手を募集しています！",color=0xFF6EC7)
 		embed.set_thumbnail(url=message.author.avatar_url)
 		await message.channel.send(embed=embed)
 	
 	elif message.content == "!ビビデバビデブー":
-		if message.author.id == 303215008802930699 or 1:
+		if message.author.id == 303215008802930699:
 			day = datetime.date.today() + timedelta(days=(7-datetime.date.today().weekday()))
 			youbi = np.array(["月","火","水","木","金","土","日","月","火","水","木","金","土","日"])
 			await message.channel.send(f"@everyone 来シーズンの出欠席\nチェックお願いします")
@@ -381,7 +391,7 @@ async def on_message(message):
 		embed.add_field(name="====",value=ddd,inline=False)
 		await message.channel.send(embed=embed)
 
-@tasks.loop(minutes=1)
+@tasks.loop(minutes=15)
 async def loop():
 	scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
 	sheet_token = os.environ['SHEET_TOKEN']
@@ -392,7 +402,6 @@ async def loop():
 	SPREADSHEET_KEY = sheet_token
 	workbook = gc.open_by_key(SPREADSHEET_KEY)
 	worksheet = workbook.worksheet("!参加")
-	print("test")
 
 loop.start()
 # botの接続と起動
