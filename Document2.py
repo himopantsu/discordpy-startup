@@ -169,6 +169,9 @@ async def on_message(message):
 		
 	elif message.content == "!やるじゃん":
 		await message.channel.send(f"ありがとう")
+
+	elif message.content == "!えふぃる":
+		await message.channel.send(f"ごみしかついてなーい")
 		
 	elif message.content == "!Esprit":
 		await message.channel.send(f"抜けたほうがいいですよ")
