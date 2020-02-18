@@ -214,6 +214,8 @@ async def on_message(message):
 	elif message.content == "!かてぽん":
 		await message.channel.send(f"ブルブルブルブルアイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:アイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:ブ・ル・ベ・リ・アイ！！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:ブルブルブルブルアイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:アイ！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:ブ・ル・ベ・リ・アイ！！:v:(՞ਊ՞:v:三:v:՞ਊ՞):v:")
 	
+	elif message.content =="!ハローキティ":
+		await message.channel.send(f"ﾊﾛｰwwｷﾃｨwwwwｺﾝﾆﾁﾜｧwww出来たてのポップコーンはいかが？/ｷﾃｨｰはみんなの人気者wwwわwwwんwwwぱwwwくwwwいじわるwww怒りん坊もwww優しいｷﾃｨとwww一緒ならwwwつられて優しくなっちゃうなぁwwwｳﾞｪｱｯ")	
 	
 	elif message.content == "!投票":
 	# リアクションアイコンを付けたい
