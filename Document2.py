@@ -407,7 +407,7 @@ async def loop():
 	SPREADSHEET_KEY = sheet_token
 	workbook = gc.open_by_key(SPREADSHEET_KEY)
 	worksheet = workbook.worksheet("!参加")
-
+	client.run(bot_token)
 loop.start()
 # botの接続と起動
 # （botアカウントのアクセストークンを入れてください）
