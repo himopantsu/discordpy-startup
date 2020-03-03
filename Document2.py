@@ -109,12 +109,12 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-	CHANNEL_ID = 576797690906673154
-	setumei = 641052750699954187
-	jikosyoukai = 577531306632806415
+	CHANNEL_ID = 683559947920867338
+	#setumei = 641052750699954187
+	#jikosyoukai = 577531306632806415
 	channel = client.get_channel(CHANNEL_ID)
 	await channel.send(f"{member.mention} さんこんにちはしゃくし～です")
-	await channel.send(f"まずは<#{setumei}>の確認と<#{jikosyoukai}>の記入をお願いします")
+	#await channel.send(f"まずは<#{setumei}>の確認と<#{jikosyoukai}>の記入をお願いします")
 	await channel.send(f"これからよろしくお願いします!")
 	
 @client.event
